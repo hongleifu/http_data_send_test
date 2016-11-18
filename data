@@ -1,7 +1,7 @@
 {
   "ip":"127.0.0.1",
-  "port":"8080",
-  "path":"/index",
+  "port":"8081",
+  "path":"/data/receive",
   "data":{
     "uid":"100001",
     "token":"abcd1992ttft",
@@ -76,7 +76,7 @@
       "operation_length":"test_value",
       "lenders":"中国银行",
       "is_estate_entire_pay":"2",
-      "is_estate_paid_off":"2"
+      "is_estate_paid_off":"2",
       "address_proof": "0",
       "car_drive_miles": "100",
       "career_start_date": "2006-10-01",
