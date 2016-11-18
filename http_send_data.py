@@ -22,8 +22,9 @@ def send():
     ip=content['ip']
     port=content['port']
     path=content['path']
-    url=ip+":"+port+path+"?"
-    data=content['data'] 
+    url="http://"+ip+":"+port+path+"?"
+    data={}
+    data['data']=content['data']
 
     url=url+urllib.urlencode(data)
     try:

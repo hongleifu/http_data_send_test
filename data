@@ -1,7 +1,7 @@
 {
   "ip":"127.0.0.1",
   "port":"8081",
-  "path":"/data/receive",
+  "path":"/qianke/data/save",
   "data":{
     "uid":"100001",
     "token":"abcd1992ttft",
