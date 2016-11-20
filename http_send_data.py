@@ -9,14 +9,21 @@ def send():
     fp=open('./data','r')
     file_content=fp.read()
     fp.close()
-    file_content = file_content.replace('$','')
-    file_content = file_content.replace('\n','')
-    file_content = file_content.decode('utf8')
+#    file_content = file_content.replace('$','')
+#    file_content = file_content.replace('\n','')
+#    file_content = file_content.replace(' ','')
+#    file_content = file_content.decode('utf8')
     
     print "read file content succ!" 
-    content=json.loads(file_content)
+#    print file_content,type(file_content)
+    content=eval(file_content)
+#    for k,v in content['data']['user_info'].items():
+#      print "----",v
+    #print content,type(content)
+#    content=exec(file_content)
+#    content=json.loads(file_content)
+    print type(content)
     print "convert to json string succ!" 
-    print content
 
     #make url
     ip=content['ip']
@@ -25,8 +32,8 @@ def send():
     url="http://"+ip+":"+port+path+"?"
     data={}
     data['data']=content['data']
-
-    url=url+urllib.urlencode(data)
+    param=urllib.urlencode(data)
+    url=url+param
     try:
         print "send url:-------------\n",url
         req=urllib2.Request(url)
